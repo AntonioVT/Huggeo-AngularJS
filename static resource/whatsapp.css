@@ -1,0 +1,328 @@
+
+/* Container background are two horizontal divs with different colors. 
+They should be behing the main content, so we modify the z-index, position 
+and some margin/padding to fill the page */
+.container-background{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: -50;
+}
+
+.container-background > div{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Container foreground must be upfront. We change the position so it 
+can overlay the background and we set an offset of 24px for the main content*/
+.container-foreground{
+    position: absolute;
+    width: 100%;
+}
+
+.container-foreground > div.row{
+    margin-top: 24px;
+}
+
+.container-boxes{
+    padding: 0px;
+    width: 75vw;
+}
+
+.container-boxes > div.col-md-12{
+    padding: 0px;
+}
+
+.box{
+    width: 100%;
+    height: calc(92vh + 1px);
+    background-color: #fafafa;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.hg-header{
+    padding: 10px 16px;
+    height: 60px;
+}
+
+.hg-footer{
+    height: 60px;
+    padding: 10px 16px;
+}
+
+.current-user-section{
+    padding-bottom: 0px;
+    background-color: #eeeeee;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.menu-item{
+    cursor: pointer;
+}
+
+.menu-button{
+    all: unset;
+}
+
+.current-user-section > div.pull-right > span > button > i.material-icons{
+    line-height: 40px;
+    height: 40px;
+    margin: 0px 8px;
+}
+
+.search-user-section > span > button > i.material-icons{
+    line-height: 40px;
+    height: 40px;
+    margin: 0px 8px;
+}
+
+.search-user-section{
+    padding: 10px 16px;
+    background-color: #f5f5f5;
+}
+
+.section-divider{
+    border: 1px solid rgba(0,0,0,0.12);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.user-group-list{
+    overflow-y: auto;
+    height: calc(92vh - 110px);
+    background-color: #fafafa;
+}
+
+.user-group-item{
+    padding: 10px 16px;
+    height: 72px;
+    background-color: #fafafa;
+}
+
+.user-group-item:hover{
+    background-color: rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.simple-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.simple-scrollbar:hover::-webkit-scrollbar{
+    overflow-y: auto;
+}
+
+.simple-scrollbar::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,0.2);
+}
+.simple-scrollbar::-webkit-scrollbar-thumb:hover{
+    background: rgba(0,0,0,0.2);
+}
+
+.user-chat-body{
+    width: 100%;
+    display: inline-block;
+}
+
+.user-chat-title{
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 16px;
+    color: #212121;
+}
+
+.user-chat-meta{
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 12px;
+    color: #9e9e9e;
+}
+
+.user-chat-status{
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 14px;
+    color: #9e9e9e;
+}
+
+.welcome-panel{
+    height: calc(92vh + 1px);
+    background-color: #e8eaf6;
+}
+
+.welcome-panel:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 6px solid #1a237e;
+    width: 100%;
+    height: 0;
+}
+
+.welcome-panel > div > h1{
+    color: #616161;
+}
+
+.welcome-panel > div > p,
+.welcome-panel > div > div{
+    color: #757575;
+}
+
+.link-whatsapp{
+    color: #303f9f;
+}
+
+.link-whatsapp:link{
+    color: #303f9f;
+    text-decoration: none;
+}
+
+.link-whatsapp:hover{
+    color: #303f9f;
+    text-decoration: none;
+}
+
+.link-whatsapp:visited {
+    color: #303f9f;
+    text-decoration: none;
+}
+
+.link-whatsapp:active {
+    color: #303f9f;
+    text-decoration: none;
+}
+
+hr{
+    border: none;
+    color: rgba(0,0,0,0.12);
+    background-color: rgba(0,0,0,0.12);
+    height: 1px;
+}
+
+.chat-header{
+    display: inline-block;
+    width: 40vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1200px){
+    .chat-header{
+        display: inline-block;
+        width: calc(39vw - 24px);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.chat-title{
+    z-index: 2;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chat-subtitle{
+    z-index: 2;
+    font-size: 12px;
+    font-weight: normal;
+    color: #757575;
+}
+
+.current-chat-section{
+    height: calc(92vh - 109px);
+    padding: 0px;
+    overflow-y: auto;
+    background-color: rgb(229, 221, 213)
+}
+
+.current-chat-section-bg{
+    position: fixed;
+    background-image: url("bgchat.png");
+    background-repeat: repeat;
+    opacity: 0.075;
+    margin-left: -81px;
+    margin-right: -81px;
+    height: 82%;
+    width: 57.65vw;
+}
+
+.current-chat-section-fg{
+    position: relative;
+    height: inherit;
+    width: 100%;
+    padding: 0px 96px;
+}
+
+.chat-bubble {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    background: #AFBAFF;
+    border-radius: 5px 0px 5px 5px;
+    border-width: 2px;
+    position: relative;
+    padding: 6px 7px 8px 9px;
+    margin: 8px 0px;
+    z-index: 5;
+    font-size: 13.6px;
+    color: #262626;
+  }
+
+.chat-bubble.alt {
+    background-color: #fafafa;
+    border-radius: 0px 5px 5px 5px;
+}
+
+.bubble-arrow{
+    position: absolute;
+    width: 0;
+    top: 0;
+    right: -4px;
+    height: 0;
+}
+
+.bubble-arrow.alt {
+    top: 0;
+    left: -4px;
+}
+
+.bubble-arrow:after {
+    border-width: 10px 10px 0 0;
+    border-color: #AFBAFF transparent transparent transparent;;
+    top: 0;
+    right: -6px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.bubble-arrow.alt:after {
+    border-width: 0 10px 10px 0;
+    border-color: transparent #fafafa transparent transparent;
+    top: 0;
+    right: -6px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.chat-bubble > div > .chat-time{
+    padding-left: 16px;
+    color: rgba(0, 0, 0, .45);
+    font-size: 11px;
+    display: inline-block;
+}

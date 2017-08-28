@@ -8,3 +8,8 @@ huggeoApp.controller('View2Ctrl', [function () {
 
 }]);
 
+
+huggeoApp.controller('MainCtrl', ['$scope', 'databaseService', function($scope, databaseService){
+    $scope.users = databaseService.users;
+
+}]);

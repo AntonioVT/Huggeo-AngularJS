@@ -1,0 +1,132 @@
+<div class="container container-foreground">
+    <div class="row">
+        <div class="container container-boxes">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="box">
+                        <div class="col-md-3 left-panel">
+                            <div class="row">
+                                <!-- CURRENT USER (Display thumbnail, new chat and menu) -->
+                                <header-group class="current-user-section">
+                                    <div class="pull-left">
+                                        <span><img src="images/pp.jpg" class="img-circle menu-item" width="40" height="40"></span>
+                                    </div>
+                                    <div class="pull-right">
+                                        <span>
+                                            <button class="menu-button"><i class="material-icons menu-item">message</i></button>
+                                            <button class="menu-button"><i class="material-icons menu-item">more_vert</i></button>
+                                        </span>
+                                    </div>
+                                </header-group>
+                                <!-- SEARCH USER (Search for a specific user/groups) -->
+                                <input-group class="search-user-section section-divider">
+                                            <span class="input-group-addon"><button class="menu-button"><i class="material-icons menu-item">search</i></button></span>
+                                            <input type="text" class="form-control" style="height: 40px" placeholder="Buscar o empezar un chat nuevo">
+                                </input-group>
+                                <!-- USER / GROUP LIST (Search for a specific user/groups) -->
+                                <div class="col-xs-12 user-group-list simple-scrollbar">
+                                    <div class="row " id="user-group-list-el">
+                                        <!-- repeat -->
+                                        <user-item ng-repeat="u in users track by $index" user="u"></user-item>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 right-panel">
+                            <div class="row">
+                                <!-- CURRENT CHAT -->
+                                <!-- CHAT HEADER -->
+                                <header-group class="current-user-section" style="border: rgb(219,219,219); border-width: 1px; border-style: solid;">
+                                    <div class="pull-left" style="margin-right: 12px;">
+                                        <div>
+                                            <span>
+                                                <img src="images/pp.png" class="img-circle menu-item"  width="40" height="40">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="pull-left">
+                                        <div style="height: 24px;">
+                                            <span class="chat-header chat-title"> Diego Benavides </span>
+                                        </div>
+                                        <div style="height: 24px;">
+                                            <span class="chat-header chat-subtitle" style="height: 16px;"> últ. vez ayer a las 21:33 </span>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">
+                                        <span>
+                                            <button class="menu-button"><i class="material-icons menu-item">search</i></button>
+                                            <button class="menu-button"><i class="material-icons menu-item">attachment</i></button>
+                                            <button class="menu-button"><i class="material-icons menu-item">more_vert</i></button>
+                                        </span>
+                                    </div>
+                                </header-group>
+
+                                <!-- CHAT BODY -->
+                                <div class="col-xs-12 current-chat-section simple-scrollbar">
+                                    <div class="current-chat-section-fg">
+                                        <div class="row simple-scrollbar" id="chat-body-el">
+                                            <div class="current-chat-section-bg"></div>
+                                            <div class="col-xs-12">
+                                                <div class="pull-left">
+                                                    <div class="chat-bubble alt">
+                                                        De que estas hablando
+                                                        <div style="float: right">
+                                                            <span class="chat-time"> 17:08 </span>
+                                                        </div>
+                                                        <div class="bubble-arrow alt"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="pull-right">
+                                                    <div class="chat-bubble">
+                                                        Ah
+                                                        <div style="float: right">
+                                                            <span class="chat-time"> 17:08 </span>
+                                                        </div>
+                                                        <div class="bubble-arrow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CHAT FOOTER -->
+                                <input-group class="current-user-section hg-footer">
+                                    <span class="input-group-addon"><button class="menu-button"><i class="material-icons menu-item">tag_faces</i></button></span>
+                                    <input type="text" class="form-control" style="height: 40px" placeholder="Escribe un mensaje aquí">
+                                    <span class="input-group-addon"><button class="menu-button"><i class="material-icons menu-item">mic</i></button></span>
+                                </input-group>
+                                <!-- Welcome Panel -->
+                                <div class="welcome-panel" hidden>
+                                    <div class="col-xs-6 col-xs-offset-3 text-center" style="margin-top: 168px">
+
+                                        <img src="images/smartphone.png" class="img-responsive" style="margin: auto; max-height:300px; max-width:300px" />
+                                        <div style="margin-top: 32px">
+                                            <h1> Mantén tu teléfono conectado </h1>
+                                            <p> WhatsApp se conecta a tu teléfono para sincronizar los mensajes. Para reducir
+                                                el consumo de tus datos, conecta tu teléfono a una red Wi-Fi. </p>
+                                        </div>
+                                        <hr>
+                                        <div style="margin-top: 32px;">
+                                            <div style="height: 33px; line-height: 33px;"><i class="material-icons" style="line-height: 28px; height: 33px; vertical-align: middle; margin-right: 12px;">laptop</i>WhatsApp
+                                                está disponible para Windows
+                                                <a class="link-whatsapp" href="https://www.whatsapp.com/download" target="_blank">Obtenla aquí</a>.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Background -->
+<div class="container-fluid container-background">
+    <div class="col-md-12" style="background-color: #303f9f; height: 128px;"></div>
+    <div class="col-md-12" style="background-color: rgba(219, 219, 211, 0.8); height: calc(100vh - 128px);"></div>
+</div>

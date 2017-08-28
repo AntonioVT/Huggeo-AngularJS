@@ -11,5 +11,10 @@ huggeoApp.config(['$locationProvider', '$routeProvider', function ($locationProv
             controller: 'View2Ctrl'
         })
 
-        .otherwise({ redirectTo: '/my-view1' });
+        .when('/home', {
+            templateUrl: 'pages/main.html',
+            controller: 'MainCtrl'
+        })
+
+        .otherwise({ redirectTo: '/home' });
 }]);
